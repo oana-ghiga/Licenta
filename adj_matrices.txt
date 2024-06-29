@@ -1,0 +1,171 @@
+# Matrix A_healthy
+0 1 1 0
+1 0 1 1
+1 1 0 1
+0 1 1 0
+
+# Matrix A_schizophrenia1
+0 1 0 1
+1 0 1 0
+0 1 0 1
+1 0 1 0
+
+# Matrix A_schizophrenia2
+0 1 1 0 0
+1 0 1 1 0
+1 1 0 1 1
+0 1 1 0 1
+0 0 1 1 0
+
+# Matrix A_schizophrenia3
+0 1 0 0 1
+1 0 1 0 0
+0 1 0 1 1
+0 0 1 0 1
+1 0 1 1 0
+
+# Matrix A_schizophrenia4
+0 1 0 1 0
+1 0 1 1 1
+0 1 0 1 0
+1 1 1 0 1
+0 1 0 1 0
+
+# Matrix A_schizophrenia5
+0 1 0 0 1
+1 0 1 0 0
+0 1 0 1 1
+0 0 1 0 1
+1 0 1 1 0
+
+# Matrix A_depression
+0 1 0 1 0
+1 0 1 0 1
+0 1 0 1 0
+1 0 1 0 1
+0 1 0 1 0
+
+# Matrix A_healthyE
+0 1 1 0
+1 0 1 1
+1 1 0 1
+0 1 1 0
+
+# Matrix A_epilepsy
+1 1 1 0 1
+1 1 0 1 1
+1 0 1 0 1
+0 1 0 1 0
+1 1 1 0 1
+
+# Matrix A_healthyP
+0 1 0 1
+1 0 1 1
+0 1 0 1
+1 1 1 0
+
+# Matrix A_parkinson
+1 1 1 0 0
+1 1 1 1 0
+1 1 1 1 1
+0 1 1 1 1
+0 0 1 1 1
+
+# Matrix A_healthyD
+0 1 1 0
+1 0 1 1
+1 1 0 1
+0 1 1 0
+
+# Matrix A_depression
+1 1 1 0 0
+1 1 0 1 1
+1 0 1 0 1
+0 1 0 1 0
+0 1 1 0 1
+
+# Matrix A_healthyS1
+0 1 1 0 0
+1 0 1 1 0
+1 1 0 1 1
+0 1 1 0 1
+0 0 1 1 0
+
+# Matrix A_schizo1
+0 1 1 1 0
+1 0 1 1 1
+1 1 0 1 0
+1 1 1 0 1
+0 1 0 1 0
+
+# Matrix A_healthyS2
+0 1 0 0 0
+1 0 1 0 0
+0 1 0 1 0
+0 0 1 0 1
+0 0 0 1 0
+
+# Matrix A_schizo2
+0 1 0 0 0
+1 0 1 0 1
+0 1 0 1 1
+0 0 1 0 1
+0 1 1 1 0
+
+# Matrix A_healthyS3
+0 1 0 0 0
+1 0 1 0 1
+0 1 0 1 1
+0 0 1 0 1
+0 1 1 1 0
+
+# Matrix A_schizo3
+0 1 0 0 0
+1 0 1 0 1
+0 1 0 1 1
+0 0 1 0 1
+0 1 1 1 0
+
+# Matrix A_healthyS4
+0 1 1 1 0
+1 0 1 1 0
+1 1 0 1 1
+1 1 1 0 1
+0 0 1 1 0
+
+# Matrix A_schizo4
+0 1 1 0 0
+1 0 1 0 1
+1 1 0 1 1
+0 0 1 0 1
+0 1 1 1 0
+
+# Matrix A_healthyS5
+0 1 1 0 0
+1 0 1 1 0
+1 1 0 1 1
+0 1 1 0 1
+0 0 1 1 0
+
+# Matrix A_schizo5
+0 1 0 1 0 1
+1 0 1 0 1 0
+0 1 0 1 0 1
+1 0 1 0 1 0
+0 1 0 1 0 1
+1 0 1 0 1 0
+
+# Matrix A_healthyS6
+0 1 0 1 0 0
+1 0 1 0 1 0
+0 1 0 1 0 0
+1 0 1 0 1 0
+0 1 0 1 0 1
+0 0 0 0 1 0
+
+# Matrix A_schizo6
+0 1 0 1 0
+1 0 1 0 1
+0 1 0 1 0
+1 0 1 0 1
+0 1 0 1 0
