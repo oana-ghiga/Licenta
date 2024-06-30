@@ -3,7 +3,12 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-def read_matrices(file_path):
+def read_matrices(file_path)->dict:
+    '''
+    Read adjacency matrices from a file
+    :param file_path:  path to the file
+    :return: dictionary of matrices
+    '''
     with open(file_path, 'r') as file:
         matrices = {}
         matrix_name = None
@@ -25,7 +30,12 @@ def read_matrices(file_path):
     return matrices
 
 
-def calculate_metrics(matrix):
+def calculate_metrics(matrix)->tuple:
+    '''
+    Calculate the degree and clustering coefficient of a network
+    :param matrix: adjacency matrix
+    :return: degree and clustering coefficient
+    '''
     G = nx.from_numpy_array(matrix)
     degree = dict(G.degree())
     clustering_coeff = nx.clustering(G)
@@ -33,16 +43,21 @@ def calculate_metrics(matrix):
     return degree, clustering_coeff
 
 
-def plot_network(matrix, matrix_name):
+def plot_network(matrix, matrix_name)->None:
+    '''
+    Plot the network graph
+    :param matrix: adjacency matrix
+    :param matrix_name: name of the matrix
+    :return: None
+    '''
     G = nx.from_numpy_array(matrix)
 
     plt.figure(figsize=(8, 6))
     pos = nx.spring_layout(G)
 
-    # Draw nodes and edges
     nx.draw_networkx_nodes(G, pos, node_color='darkred', node_size=500)
     nx.draw_networkx_edges(G, pos, width=1.0, alpha=0.5, edge_color='salmon')
-    nx.draw_networkx_labels(G, pos, font_size=12, font_family='sans-serif')
+    nx.draw_networkx_labels(G, pos, font_size=12, font_family='sans-serif', font_color='white')
 
     plt.title(f"Network Graph: {matrix_name}", fontsize=14, color='maroon')
     plt.axis('off')
@@ -51,6 +66,11 @@ def plot_network(matrix, matrix_name):
 
 
 def main():
+    '''
+    Main function to read the adjacency matrices, calculate the degree and clustering coefficient of the network,
+    show the network graph and plot the degree and clustering coefficient comparison.
+    :return: None
+    '''
     file_path = 'adj_matrices.txt'
     matrices = read_matrices(file_path)
 
@@ -62,13 +82,14 @@ def main():
         degree_all[name] = degree
         clustering_coeff_all[name] = clustering_coeff
 
-        plot_network(matrix, name)  # Plot network for each matrix
+        plot_network(matrix, name)  #building the network graph
 
-    # Create separate comparison plots for "healthy" and "non-healthy" cases
+
+    #separate healthy and sick cases
     healthy_names = [name for name in degree_all.keys() if 'healthy' in name]
-    non_healthy_names = [name for name in degree_all.keys() if 'healthy' not in name]
+    sick = [name for name in degree_all.keys() if 'healthy' not in name]
 
-    # Plot degrees for healthy cases
+    #healthy cases degree
     plt.figure(figsize=(12, 6))
     for name in healthy_names:
         degree = degree_all[name]
@@ -80,9 +101,9 @@ def main():
     plt.tight_layout()
     plt.show()
 
-    # Plot degrees for non-healthy cases
+    #sick cases degree
     plt.figure(figsize=(12, 6))
-    for name in non_healthy_names:
+    for name in sick:
         degree = degree_all[name]
         plt.plot(list(degree.keys()), list(degree.values()), marker='o', label=name)
     plt.title('Degree Comparison (Pathological)', fontsize=14, color='red')
@@ -92,7 +113,7 @@ def main():
     plt.tight_layout()
     plt.show()
 
-    # Plot clustering coefficients for healthy cases
+    #healthy cases clustering
     plt.figure(figsize=(12, 6))
     for name in healthy_names:
         clustering_coeff = clustering_coeff_all[name]
@@ -104,9 +125,9 @@ def main():
     plt.tight_layout()
     plt.show()
 
-    # Plot clustering coefficients for non-healthy cases
+    #sick cases clustering
     plt.figure(figsize=(12, 6))
-    for name in non_healthy_names:
+    for name in sick:
         clustering_coeff = clustering_coeff_all[name]
         plt.plot(list(clustering_coeff.keys()), list(clustering_coeff.values()), marker='o', label=name)
     plt.title('Clustering Coefficient Comparison (Pathological)', fontsize=14, color='red')
