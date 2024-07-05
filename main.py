@@ -42,7 +42,7 @@ def plot_network(matrix, matrix_name):
     # Draw nodes and edges
     nx.draw_networkx_nodes(G, pos, node_color='darkred', node_size=500)
     nx.draw_networkx_edges(G, pos, width=1.0, alpha=0.5, edge_color='salmon')
-    nx.draw_networkx_labels(G, pos, font_size=12, font_family='sans-serif')
+    nx.draw_networkx_labels(G, pos, font_size=12, font_family='sans-serif', font_color='white')
 
     plt.title(f"Network Graph: {matrix_name}", fontsize=14, color='maroon')
     plt.axis('off')

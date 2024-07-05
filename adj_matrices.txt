@@ -38,7 +38,7 @@
 0 0 1 0 1
 1 0 1 1 0
 
-# Matrix A_depression
+# Matrix A_depression0
 0 1 0 1 0
 1 0 1 0 1
 0 1 0 1 0
@@ -77,7 +77,7 @@
 1 1 0 1
 0 1 1 0
 
-# Matrix A_depression
+# Matrix A_depression1
 1 1 1 0 0
 1 1 0 1 1
 1 0 1 0 1
